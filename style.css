@@ -1241,3 +1241,38 @@
                 transform: translateY(0);
             }
         }
+
+        /* --- KODE KHUSUS UNTUK TAMPILAN HP (RESPONSIVE) --- */
+@media (max-width: 768px) {
+    /* 1. Mengubah 3 kolom menjadi 1 kolom saja di HP */
+    .destination-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 0 15px;
+    }
+
+    /* 2. Menyesuaikan ukuran teks banner agar tidak kebesaran */
+    .banner-title {
+        font-size: 2.2rem; /* Mengecil dari 4rem */
+    }
+
+    .banner-subtitle {
+        font-size: 1.1rem; /* Mengecil dari 1.5rem */
+    }
+
+    /* 3. Memperbaiki background gambar banner di HP */
+    .banner-slide {
+        background-attachment: scroll; /* Mengganti fixed yang sering rusak di HP */
+        height: auto;
+        padding: 100px 0;
+    }
+
+    .banner-section {
+        height: auto;
+    }
+
+    /* 4. Menyesuaikan padding bagian section agar tidak terlalu renggang */
+    .about-section, .destination-section {
+        padding: 60px 0;
+    }
+}
